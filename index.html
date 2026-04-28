@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kadu Lopes | Backend Developer</title>
+
+  <!-- SEO + LinkedIn -->
+  <meta name="description" content="Desenvolvedor Backend Python | APIs REST | SQL | Projetos reais" />
+  <meta property="og:title" content="Kadu Lopes | Backend Developer" />
+  <meta property="og:description" content="Portfólio focado em backend com APIs reais" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --card: #111827;
+      --primary: #22c55e;
+      --secondary: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #020617, #0b0f1a);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    .buttons {
+    margin-top: 1rem;
+    }
+
+    .btn {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0.3rem;
+    }
+
+    .btn-primary {
+    background: var(--primary);
+    color: #000;
+    }
+
+    .btn-secondary {
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+    }
+        
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.2rem;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--primary);
+    }
+
+    h2 {
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    .stack span {
+      display: inline-block;
+      background: #020617;
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+      margin: 0.2rem;
+      font-size: 0.85rem;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media(min-width: 768px) {
+      h1 { font-size: 2.8rem; }
+      .container { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Kadu Lopes</h1>
+  <p class="subtitle">Backend Developer | Python </p>
+
+  <div class="buttons">
+    <a href="cv.pdf" class="btn btn-primary" download>Baixar CV</a>
+    <a href="#projetos" class="btn btn-secondary">Ver Projetos</a>
+  </div>
+</header>
+
+<section class="container">
+
+  <div class="card">
+    <h2>Sobre mim</h2>
+   <p>
+        Desenvolvedor backend em formação com foco em Python, consumo de APIs e experiência em leitura de documentação.
+        Buscando primeira oportunidade para evoluir na construção de APIs e sistemas reais.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Stack</h2>
+    <div class="stack">
+      <span>Python</span>
+      <span>SQL</span>
+      <span>Git</span>
+      <span>Java (aprendendo)</span>
+    </div>
+  </div>
+
+  <div class="card" id="projetos">
+    <!-- <h2>Projetos</h2>
+    <p><strong>API de Cadastro</strong><br>Autenticação + CRUD + Banco de dados</p>
+    <p><strong>Sistema de Salão</strong><br>Agendamentos reais com clientes</p> -->
+    <h3>EM DESENVOLVIMENTO</h3>
+  </div>
+
+  <div class="card">
+    <h2>Status da API</h2>
+    <p id="status">Verificando...</p>
+  </div>
+
+<div class="card">
+  <h2>Contato</h2>
+
+    <p>
+    <a href="mailto:kaduplopes2005@email.com" class="btn btn-secondary">
+      Email
+    </a>
+    </p>
+
+  
+    <p>
+      <a href="https://github.com/Kadu-Lopes" target="_blank" class="btn btn-secondary">
+          GitHub
+        </a>
+    </p>
+    <p>
+      <a href="https://www.linkedin.com/in/kadu-lopes-72b5742a1/" target="_blank" class="btn btn-secondary">
+        LinkedIn
+      </a>
+    </p>
+</div>
+</section>
+
+<footer>
+  <p>© 2026 - Kadu Lopes</p>
+</footer>
+
+<script>
+  fetch('https://sua-api.com/health')
+    .then(() => document.getElementById('status').innerText = 'API Online 🟢')
+    .catch(() => document.getElementById('status').innerText = 'API Offline 🔴');
+</script>
+
+</body>
+</html>
